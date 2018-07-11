@@ -332,7 +332,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal HAL
 PRODUCT_PACKAGES += \
-    thermal.angler \
+    android.hardware.thermal@1.1-service.angler
 
 #GNSS HAL
 PRODUCT_PACKAGES += \
