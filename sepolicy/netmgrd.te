@@ -18,7 +18,6 @@ allow netmgrd self:netlink_route_socket nlmsg_write;
 allow netmgrd self:netlink_xfrm_socket { create_socket_perms_no_ioctl nlmsg_write nlmsg_read};
 allow netmgrd self:socket create_socket_perms;
 allowxperm netmgrd self:socket ioctl msm_sock_ipc_ioctls;
-#allow netmgrd netd_socket:sock_file w_file_perms;
 allow netmgrd net_data_file:dir r_dir_perms;
 allow netmgrd net_data_file:file r_file_perms;
 
@@ -45,3 +44,9 @@ allow netmgrd toolbox_exec:file rx_file_perms;
 
 #Allow netmgrd to use wakelock
 wakelock_use(netmgrd)
+
+binder_call(netmgrd, netd)
+binder_call(netmgrd, servicemanager)
+allow netmgrd system_net_netd_hwservice:hwservice_manager find;
+get_prop(netmgrd, hwservicemanager_prop)
+hwbinder_use(netmgrd)
