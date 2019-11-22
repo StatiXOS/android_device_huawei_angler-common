@@ -1,3 +1,2 @@
-allow hal_gnss_default qmuxd_socket:dir search;
-allow hal_gnss_default self:udp_socket create;
+allow hal_gnss_default qmuxd_socket:dir { write search };
 

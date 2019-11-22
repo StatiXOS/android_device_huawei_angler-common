@@ -1,2 +1,2 @@
-allow per_proxy device:file { open, write };
+allow per_proxy device:file { open write };
 
