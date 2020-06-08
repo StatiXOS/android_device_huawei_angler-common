@@ -8,5 +8,9 @@
    "repository": "StatiXOS/android_vendor_huawei",
    "target_path": "vendor/huawei",
    "branch": "10"
+ },
+ {
+    "repository": "android_hardware_sony_timekeep",
+    "target_path": "hardware/sony/timekeep"
  }
 ]
